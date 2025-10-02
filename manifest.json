@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Remove Em Dashes",
+  "version": "1.0.0",
+  "description": "Replaces em dashes with hyphens on ChatGPT, Gemini, and Claude.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://gemini.google.com/*",
+        "https://grok.com/*",
+        "https://claude.ai/*",
+        "https://poe.com/*",
+        "https://chat.deepseek.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
